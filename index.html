@@ -7,30 +7,57 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Animated background hearts -->
+  <div class="hearts-background">
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+  </div>
+
   <!-- Screen 1: Welcome -->
   <div class="card" id="screen1">
+    <div class="heart-icon">💖</div>
     <h1>My Love ❤️</h1>
-    <p>This distance made me creative… so I made this just for you.</p>
-    <button class="next-btn" onclick="nextScreen(1)">Click here</button>
+    <p>This distance made me creative…<br>so I made this just for you.</p>
+    <button class="next-btn" onclick="nextScreen(1)">
+      <span>Click here</span>
+      <div class="button-glow"></div>
+    </button>
   </div>
 
   <!-- Screen 2: Sweet message -->
   <div class="card hidden" id="screen2">
-    <p class="message">Even from miles away,<br>you are my peace, my home, my safe place.</p>
-    <button class="next-btn" onclick="nextScreen(2)">Next</button>
+    <div class="quote-mark">"</div>
+    <p class="message">Even from miles away,<br>you are my peace,<br>my home,<br>my safe place.</p>
+    <div class="quote-mark bottom">"</div>
+    <button class="next-btn" onclick="nextScreen(2)">
+      <span>Next</span>
+      <div class="button-glow"></div>
+    </button>
   </div>
 
   <!-- Screen 3: Build anticipation -->
   <div class="card hidden" id="screen3">
+    <div class="thinking-emoji">🤔</div>
     <p class="message">So I wanted to ask you something…</p>
-    <button class="next-btn" onclick="nextScreen(3)">Okay…</button>
+    <button class="next-btn" onclick="nextScreen(3)">
+      <span>Okay…</span>
+      <div class="button-glow"></div>
+    </button>
   </div>
 
   <!-- Screen 4: The Question -->
   <div class="card hidden" id="screen4">
-    <h1 class="question">💌 Will you be my Valentine?</h1>
+    <div class="letter-icon">💌</div>
+    <h1 class="question">Will you be<br>my Valentine?</h1>
     <div class="button-container">
-      <button class="yes-btn" onclick="sayYes()">YES 💖</button>
+      <button class="yes-btn" onclick="sayYes()">
+        <span>YES 💖</span>
+        <div class="button-glow"></div>
+      </button>
       <button class="no-btn" id="noBtn">NO 🙃</button>
     </div>
   </div>
