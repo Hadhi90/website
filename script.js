@@ -399,7 +399,7 @@ function openVideoWindow() {
           </video>
         </div>
         
-        <div class="footer-message">Distance or not… you're my Valentine forever 💕</div>
+        <div class="footer-message">You're my Valentine forever 💕</div>
       </div>
     </body>
     </html>
