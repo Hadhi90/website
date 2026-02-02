@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For My Valentine ❤️</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Screen 1: Welcome -->
+  <div class="card" id="screen1">
+    <h1>My Love ❤️</h1>
+    <p>This distance made me creative… so I made this just for you.</p>
+    <button class="next-btn" onclick="nextScreen(1)">Click here</button>
+  </div>
+
+  <!-- Screen 2: Sweet message -->
+  <div class="card hidden" id="screen2">
+    <p class="message">Even from miles away,<br>you are my peace, my home, my safe place.</p>
+    <button class="next-btn" onclick="nextScreen(2)">Next</button>
+  </div>
+
+  <!-- Screen 3: Build anticipation -->
+  <div class="card hidden" id="screen3">
+    <p class="message">So I wanted to ask you something…</p>
+    <button class="next-btn" onclick="nextScreen(3)">Okay…</button>
+  </div>
+
+  <!-- Screen 4: The Question -->
+  <div class="card hidden" id="screen4">
+    <h1 class="question">💌 Will you be my Valentine?</h1>
+    <div class="button-container">
+      <button class="yes-btn" onclick="sayYes()">YES 💖</button>
+      <button class="no-btn" id="noBtn">NO 🙃</button>
+    </div>
+  </div>
+
+  <!-- Confetti Container -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>

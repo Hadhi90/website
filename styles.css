@@ -1,0 +1,256 @@
+/* ============================================
+   GLOBAL STYLES
+   ============================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #ffd6e8, #ffeef6, #ffe4f0);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ============================================
+   CARD CONTAINER
+   ============================================ */
+.card {
+  background: white;
+  padding: 50px 40px;
+  border-radius: 25px;
+  width: 90%;
+  max-width: 550px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(233, 30, 99, 0.2);
+  animation: fadeInUp 0.8s ease;
+  position: relative;
+  z-index: 10;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================
+   TYPOGRAPHY
+   ============================================ */
+h1 {
+  color: #e91e63;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.question {
+  font-size: 2rem;
+  line-height: 1.4;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.8;
+  margin: 20px 0;
+}
+
+.message {
+  font-size: 1.3rem;
+  color: #444;
+  font-style: italic;
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+button {
+  padding: 15px 35px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 15px 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+  transform: translateY(-1px);
+}
+
+.next-btn {
+  background: linear-gradient(135deg, #e91e63, #f06292);
+  color: white;
+}
+
+.next-btn:hover {
+  background: linear-gradient(135deg, #c2185b, #e91e63);
+}
+
+.button-container {
+  margin-top: 30px;
+  position: relative;
+  min-height: 100px;
+}
+
+.yes-btn {
+  background: linear-gradient(135deg, #4caf50, #66bb6a);
+  color: white;
+  font-size: 1.3rem;
+  padding: 18px 40px;
+}
+
+.yes-btn:hover {
+  background: linear-gradient(135deg, #388e3c, #4caf50);
+}
+
+.no-btn {
+  background: linear-gradient(135deg, #f44336, #e57373);
+  color: white;
+  position: absolute;
+  transition: all 0.3s ease;
+}
+
+.no-btn:hover {
+  background: linear-gradient(135deg, #d32f2f, #f44336);
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+.hidden {
+  display: none;
+}
+
+/* ============================================
+   CONFETTI CANVAS
+   ============================================ */
+#confetti-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 768px) {
+  .card {
+    padding: 40px 30px;
+    max-width: 95%;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .question {
+    font-size: 1.6rem;
+  }
+
+  p, .message {
+    font-size: 1.1rem;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 12px 28px;
+  }
+
+  .yes-btn {
+    font-size: 1.1rem;
+    padding: 15px 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 30px 20px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .question {
+    font-size: 1.4rem;
+  }
+
+  p, .message {
+    font-size: 1rem;
+  }
+
+  button {
+    font-size: 0.95rem;
+    padding: 10px 25px;
+  }
+}
+
+/* ============================================
+   FLOATING HEARTS ANIMATION
+   ============================================ */
+body::before,
+body::after {
+  content: '❤️';
+  position: absolute;
+  font-size: 2rem;
+  opacity: 0.1;
+  animation: floatHeart 20s infinite;
+}
+
+body::before {
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+body::after {
+  bottom: 10%;
+  right: 10%;
+  animation-delay: 10s;
+}
+
+@keyframes floatHeart {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-30px) rotate(10deg);
+  }
+}
